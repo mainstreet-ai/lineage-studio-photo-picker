@@ -1,0 +1,507 @@
+{
+  "clientSlug": "wiles",
+  "clientName": "Jackie Wiles",
+  "displayTitle": "Jackie's Wedding Album — Pick Your Photos",
+  "intro": [
+    "Tap a photo to see it big. Tap Select on the ones you want in your book.",
+    "When you are done, tap the green Submit my picks button at the bottom. It sends your list straight to Liane 2014 no texting needed."
+  ],
+  "webhookUrl": "https://lineagestudio.app.n8n.cloud/webhook/8caa03b0-3b77-4b34-9acf-c636494b3beb/lineage-studio-photo-picker-submit",
+  "sections": [
+    {
+      "title": "Wedding Day",
+      "photos": [
+        {
+          "number": 1,
+          "file": "photos/001.jpg",
+          "frameId": "13-45-0018"
+        },
+        {
+          "number": 2,
+          "file": "photos/002.jpg",
+          "frameId": "13-45-0019"
+        },
+        {
+          "number": 3,
+          "file": "photos/003.jpg",
+          "frameId": "13-45-0020"
+        },
+        {
+          "number": 4,
+          "file": "photos/004.jpg",
+          "frameId": "13-45-0021"
+        },
+        {
+          "number": 5,
+          "file": "photos/005.jpg",
+          "frameId": "13-45-0022"
+        },
+        {
+          "number": 6,
+          "file": "photos/006.jpg",
+          "frameId": "13-45-0023"
+        },
+        {
+          "number": 7,
+          "file": "photos/007.jpg",
+          "frameId": "13-45-0024"
+        },
+        {
+          "number": 8,
+          "file": "photos/008.jpg",
+          "frameId": "13-45-0025"
+        },
+        {
+          "number": 9,
+          "file": "photos/009.jpg",
+          "frameId": "13-45-0026"
+        },
+        {
+          "number": 10,
+          "file": "photos/010.jpg",
+          "frameId": "13-45-0027"
+        },
+        {
+          "number": 11,
+          "file": "photos/011.jpg",
+          "frameId": "13-45-0028"
+        },
+        {
+          "number": 12,
+          "file": "photos/012.jpg",
+          "frameId": "13-45-0029"
+        },
+        {
+          "number": 13,
+          "file": "photos/013.jpg",
+          "frameId": "13-45-0030"
+        },
+        {
+          "number": 14,
+          "file": "photos/014.jpg",
+          "frameId": "13-45-0031"
+        },
+        {
+          "number": 15,
+          "file": "photos/015.jpg",
+          "frameId": "13-45-0032"
+        },
+        {
+          "number": 16,
+          "file": "photos/016.jpg",
+          "frameId": "13-45-0033"
+        },
+        {
+          "number": 17,
+          "file": "photos/017.jpg",
+          "frameId": "13-45-0034"
+        },
+        {
+          "number": 18,
+          "file": "photos/018.jpg",
+          "frameId": "13-45-0035"
+        },
+        {
+          "number": 19,
+          "file": "photos/019.jpg",
+          "frameId": "13-45-0036"
+        },
+        {
+          "number": 20,
+          "file": "photos/020.jpg",
+          "frameId": "13-45-0037"
+        },
+        {
+          "number": 21,
+          "file": "photos/021.jpg",
+          "frameId": "13-45-0038"
+        },
+        {
+          "number": 22,
+          "file": "photos/022.jpg",
+          "frameId": "13-45-0039"
+        },
+        {
+          "number": 23,
+          "file": "photos/023.jpg",
+          "frameId": "13-45-0040"
+        },
+        {
+          "number": 24,
+          "file": "photos/024.jpg",
+          "frameId": "13-45-0041"
+        },
+        {
+          "number": 25,
+          "file": "photos/025.jpg",
+          "frameId": "13-45-0042"
+        },
+        {
+          "number": 26,
+          "file": "photos/026.jpg",
+          "frameId": "13-45-0043"
+        },
+        {
+          "number": 27,
+          "file": "photos/027.jpg",
+          "frameId": "13-45-0044"
+        },
+        {
+          "number": 28,
+          "file": "photos/028.jpg",
+          "frameId": "13-45-0045"
+        },
+        {
+          "number": 29,
+          "file": "photos/029.jpg",
+          "frameId": "13-45-0046"
+        },
+        {
+          "number": 30,
+          "file": "photos/030.jpg",
+          "frameId": "13-45-0048"
+        },
+        {
+          "number": 31,
+          "file": "photos/031.jpg",
+          "frameId": "13-45-0049"
+        },
+        {
+          "number": 32,
+          "file": "photos/032.jpg",
+          "frameId": "13-45-0050"
+        },
+        {
+          "number": 33,
+          "file": "photos/033.jpg",
+          "frameId": "13-55-0001"
+        },
+        {
+          "number": 34,
+          "file": "photos/034.jpg",
+          "frameId": "13-55-0003"
+        },
+        {
+          "number": 35,
+          "file": "photos/035.jpg",
+          "frameId": "13-55-0004"
+        },
+        {
+          "number": 36,
+          "file": "photos/036.jpg",
+          "frameId": "13-55-0005"
+        },
+        {
+          "number": 37,
+          "file": "photos/037.jpg",
+          "frameId": "13-55-0006"
+        },
+        {
+          "number": 38,
+          "file": "photos/038.jpg",
+          "frameId": "13-55-0007"
+        },
+        {
+          "number": 39,
+          "file": "photos/039.jpg",
+          "frameId": "13-55-0008"
+        },
+        {
+          "number": 40,
+          "file": "photos/040.jpg",
+          "frameId": "13-55-0009"
+        },
+        {
+          "number": 41,
+          "file": "photos/041.jpg",
+          "frameId": "13-55-0010"
+        },
+        {
+          "number": 42,
+          "file": "photos/042.jpg",
+          "frameId": "13-55-0011"
+        },
+        {
+          "number": 43,
+          "file": "photos/043.jpg",
+          "frameId": "13-55-0012"
+        },
+        {
+          "number": 44,
+          "file": "photos/044.jpg",
+          "frameId": "13-55-0013"
+        },
+        {
+          "number": 45,
+          "file": "photos/045.jpg",
+          "frameId": "13-55-0014"
+        },
+        {
+          "number": 46,
+          "file": "photos/046.jpg",
+          "frameId": "13-55-0015"
+        },
+        {
+          "number": 47,
+          "file": "photos/047.jpg",
+          "frameId": "13-55-0016"
+        },
+        {
+          "number": 48,
+          "file": "photos/048.jpg",
+          "frameId": "13-55-0017"
+        },
+        {
+          "number": 49,
+          "file": "photos/049.jpg",
+          "frameId": "13-55-0018"
+        },
+        {
+          "number": 50,
+          "file": "photos/050.jpg",
+          "frameId": "13-55-0020"
+        },
+        {
+          "number": 51,
+          "file": "photos/051.jpg",
+          "frameId": "13-55-0021"
+        },
+        {
+          "number": 52,
+          "file": "photos/052.jpg",
+          "frameId": "13-55-0022"
+        },
+        {
+          "number": 53,
+          "file": "photos/053.jpg",
+          "frameId": "13-55-0023"
+        },
+        {
+          "number": 54,
+          "file": "photos/054.jpg",
+          "frameId": "13-55-0024"
+        },
+        {
+          "number": 55,
+          "file": "photos/055.jpg",
+          "frameId": "13-55-0025"
+        },
+        {
+          "number": 56,
+          "file": "photos/056.jpg",
+          "frameId": "13-55-0026"
+        },
+        {
+          "number": 57,
+          "file": "photos/057.jpg",
+          "frameId": "13-55-0027"
+        },
+        {
+          "number": 58,
+          "file": "photos/058.jpg",
+          "frameId": "13-55-0028"
+        },
+        {
+          "number": 59,
+          "file": "photos/059.jpg",
+          "frameId": "13-55-0029"
+        },
+        {
+          "number": 60,
+          "file": "photos/060.jpg",
+          "frameId": "13-55-0030"
+        },
+        {
+          "number": 61,
+          "file": "photos/061.jpg",
+          "frameId": "13-55-0032"
+        },
+        {
+          "number": 88,
+          "file": "photos/088.jpg",
+          "frameId": "14-10-0002"
+        },
+        {
+          "number": 89,
+          "file": "photos/089.jpg",
+          "frameId": "14-10-0003"
+        },
+        {
+          "number": 90,
+          "file": "photos/090.jpg",
+          "frameId": "14-10-0004"
+        },
+        {
+          "number": 91,
+          "file": "photos/091.jpg",
+          "frameId": "14-10-0005"
+        },
+        {
+          "number": 92,
+          "file": "photos/092.jpg",
+          "frameId": "14-10-0007"
+        },
+        {
+          "number": 93,
+          "file": "photos/093.jpg",
+          "frameId": "14-10-0008"
+        },
+        {
+          "number": 94,
+          "file": "photos/094.jpg",
+          "frameId": "14-10-0009"
+        },
+        {
+          "number": 95,
+          "file": "photos/095.jpg",
+          "frameId": "14-10-0010"
+        },
+        {
+          "number": 96,
+          "file": "photos/096.jpg",
+          "frameId": "14-10-0011"
+        },
+        {
+          "number": 97,
+          "file": "photos/097.jpg",
+          "frameId": "14-10-0013"
+        }
+      ]
+    },
+    {
+      "title": "Honeymoon & Travel",
+      "photos": [
+        {
+          "number": 62,
+          "file": "photos/062.jpg",
+          "frameId": "14-10-0033"
+        },
+        {
+          "number": 63,
+          "file": "photos/063.jpg",
+          "frameId": "14-10-0034"
+        },
+        {
+          "number": 64,
+          "file": "photos/064.jpg",
+          "frameId": "14-10-0035"
+        },
+        {
+          "number": 65,
+          "file": "photos/065.jpg",
+          "frameId": "14-10-0036"
+        },
+        {
+          "number": 66,
+          "file": "photos/066.jpg",
+          "frameId": "14-10-0037"
+        },
+        {
+          "number": 67,
+          "file": "photos/067.jpg",
+          "frameId": "14-10-0038"
+        },
+        {
+          "number": 68,
+          "file": "photos/068.jpg",
+          "frameId": "14-10-0039"
+        },
+        {
+          "number": 69,
+          "file": "photos/069.jpg",
+          "frameId": "14-10-0040"
+        },
+        {
+          "number": 70,
+          "file": "photos/070.jpg",
+          "frameId": "14-10-0041"
+        },
+        {
+          "number": 71,
+          "file": "photos/071.jpg",
+          "frameId": "15384"
+        },
+        {
+          "number": 72,
+          "file": "photos/072.jpg",
+          "frameId": "13-55-0033"
+        },
+        {
+          "number": 73,
+          "file": "photos/073.jpg",
+          "frameId": "13-55-0034"
+        },
+        {
+          "number": 74,
+          "file": "photos/074.jpg",
+          "frameId": "13-55-0036"
+        },
+        {
+          "number": 75,
+          "file": "photos/075.jpg",
+          "frameId": "13-55-0038"
+        },
+        {
+          "number": 76,
+          "file": "photos/076.jpg",
+          "frameId": "13-55-0039"
+        },
+        {
+          "number": 77,
+          "file": "photos/077.jpg",
+          "frameId": "13-55-0040"
+        },
+        {
+          "number": 78,
+          "file": "photos/078.jpg",
+          "frameId": "13-55-0041"
+        },
+        {
+          "number": 79,
+          "file": "photos/079.jpg",
+          "frameId": "13-55-0042"
+        },
+        {
+          "number": 80,
+          "file": "photos/080.jpg",
+          "frameId": "13-55-0043"
+        },
+        {
+          "number": 81,
+          "file": "photos/081.jpg",
+          "frameId": "13-55-0044"
+        },
+        {
+          "number": 82,
+          "file": "photos/082.jpg",
+          "frameId": "13-55-0046"
+        },
+        {
+          "number": 83,
+          "file": "photos/083.jpg",
+          "frameId": "13-55-0047"
+        },
+        {
+          "number": 84,
+          "file": "photos/084.jpg",
+          "frameId": "13-55-0048"
+        },
+        {
+          "number": 85,
+          "file": "photos/085.jpg",
+          "frameId": "13-55-0049"
+        },
+        {
+          "number": 86,
+          "file": "photos/086.jpg",
+          "frameId": "13-55-0050"
+        },
+        {
+          "number": 87,
+          "file": "photos/087.jpg",
+          "frameId": "14-10-0001"
+        }
+      ]
+    }
+  ]
+}

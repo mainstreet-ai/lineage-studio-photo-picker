@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Lineage Studio - Photo Selection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div id="headerContent"></div></header>
+<div id="app"><div id="loading">Loading photos…</div></div>
+<footer>
+  <span class="cnt"><span id="c">0</span> selected</span>
+  <button class="act send" id="sendBtn" disabled onclick="PICKER.showSubmitScreen()">✔ Submit my picks</button>
+</footer>
+<div id="lb">
+  <img id="lbimg" src="" alt="">
+  <div class="lbbar">
+    <button onclick="PICKER.lbToggle()" id="lbsel">Select</button>
+    <span id="lbn"></span>
+    <button onclick="PICKER.closeLb()">Close ✕</button>
+  </div>
+  <button class="nav" id="prev" onclick="PICKER.lbStep(-1)">‹</button>
+  <button class="nav" id="next" onclick="PICKER.lbStep(1)">›</button>
+</div>
+<div id="out"></div>
+<script src="app.js"></script>
+</body>
+</html>
