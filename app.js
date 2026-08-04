@@ -36,7 +36,7 @@
     document.title = 'The Lineage Studio - Client Photo Pickers';
     document.getElementById('headerContent').innerHTML =
       '<h1>Client Photo Pickers</h1><p>Select a client to open their picker.</p>';
-    document.getElementById('sendBtn').style.display = 'none';
+    document.getElementById('footer').style.display = 'none';
     app.innerHTML = '<div id="loading">Loading…</div>';
 
     ADMIN_AUTH.check(function () {
