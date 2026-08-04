@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Client Selections - The Lineage Studio</title>
+<link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body>
+<header>
+  <h1 id="pageTitle">Client Selections</h1>
+  <p><a href="index.html">&larr; All clients</a></p>
+</header>
+<main id="main"><div class="empty">Loading…</div></main>
+<script src="auth.js?v=1"></script>
+<script>
+var ADMIN_API = 'https://lineagestudio.app.n8n.cloud/webhook/lineage-studio-admin-selections';
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+function fmtDate(iso) {
+  try {
+    return new Date(iso).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
+  } catch (e) {
+    return iso;
+  }
+}
+
+function copyList(frameIds, btn) {
+  var text = frameIds.join(', ');
+  navigator.clipboard.writeText(text).then(function () {
+    var orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(function () { btn.textContent = orig; }, 1500);
+  });
+}
+window.PICKER_ADMIN = { copyList: copyList };
+
+ADMIN_AUTH.check(function () {
+  var qs = new URLSearchParams(window.location.search);
+  var slug = qs.get('client');
+  var main = document.getElementById('main');
+
+  if (!slug) {
+    main.innerHTML = '<div class="err">No client specified.</div>';
+    return;
+  }
+
+  Promise.all([
+    fetch('../clients/' + encodeURIComponent(slug) + '/config.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('config');
+      return r.json();
+    }),
+    fetch(ADMIN_API + '?client=' + encodeURIComponent(slug) + '&t=' + Date.now(), { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('selections');
+      return r.json();
+    })
+  ]).then(function (results) {
+    var config = results[0];
+    var rows = results[1];
+
+    document.getElementById('pageTitle').textContent = config.clientName + ' - Selections';
+    document.title = config.clientName + ' Selections - The Lineage Studio';
+
+    var fileByNumber = {};
+    (config.sections || []).forEach(function (sec) {
+      (sec.photos || []).forEach(function (p) { fileByNumber[p.number] = p.file; });
+    });
+
+    if (!rows.length) {
+      main.innerHTML = '<div class="empty">' + escapeHtml(config.clientName) + ' has not submitted any picks yet.</div>';
+      return;
+    }
+
+    var batches = {};
+    var order = [];
+    rows.forEach(function (row) {
+      var key = row.submittedAt;
+      if (!batches[key]) { batches[key] = []; order.push(key); }
+      batches[key].push(row);
+    });
+    order.sort(function (a, b) { return new Date(b) - new Date(a); });
+
+    var html = '';
+    order.forEach(function (key, batchIdx) {
+      var batchRows = batches[key].sort(function (a, b) { return a.photoNumber - b.photoNumber; });
+      var frameIds = batchRows.map(function (r) { return r.frameId; }).filter(Boolean);
+      html += '<div class="batch">';
+      html += '<div class="batchHead"><span>' + fmtDate(key) + ' &mdash; ' + batchRows.length + ' photo' + (batchRows.length === 1 ? '' : 's') + (batchIdx === 0 ? ' (latest)' : '') + '</span>';
+      html += '<button class="copyBtn" onclick=\'PICKER_ADMIN.copyList(' + JSON.stringify(frameIds).replace(/'/g, '&#39;') + ', this)\'>Copy frame IDs</button></div>';
+      html += '<div class="grid">';
+      batchRows.forEach(function (row) {
+        var file = fileByNumber[row.photoNumber];
+        var src = file ? encodeURI('../clients/' + slug + '/' + file) : '';
+        html += '<div class="card">';
+        html += file ? '<img src="' + src + '" alt="#' + row.photoNumber + '">' : '<div style="height:140px;display:flex;align-items:center;justify-content:center;color:#a33;font-size:13px;padding:8px;text-align:center">Photo file not found</div>';
+        html += '<div class="cap"><span class="num">#' + row.photoNumber + '</span><span class="frame">' + escapeHtml(row.frameId || '') + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div></div>';
+    });
+
+    main.innerHTML = html;
+  }).catch(function (err) {
+    main.innerHTML = '<div class="err">Could not load this client\'s selections (' + escapeHtml(err.message) + ').</div>';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin - The Lineage Studio</title>
+<link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body>
+<header>
+  <h1>Client Photo Selections</h1>
+  <p>Pick a client to see what they selected.</p>
+</header>
+<main id="main"><div class="empty">Loading…</div></main>
+<script src="auth.js?v=1"></script>
+<script>
+ADMIN_AUTH.check(function () {
+  fetch('../clients/manifest.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (clients) {
+      var main = document.getElementById('main');
+      if (!clients.length) {
+        main.innerHTML = '<div class="empty">No clients yet.</div>';
+        return;
+      }
+      var html = '<ul class="clientList">';
+      clients.forEach(function (c) {
+        html += '<li><a href="client.html?client=' + encodeURIComponent(c.slug) + '">' + c.clientName + '</a></li>';
+      });
+      html += '</ul>';
+      main.innerHTML = html;
+    })
+    .catch(function () {
+      document.getElementById('main').innerHTML = '<div class="err">Could not load the client list.</div>';
+    });
+});
+</script>
+</body>
+</html>

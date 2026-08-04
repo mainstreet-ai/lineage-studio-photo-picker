@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;background:#f4f1ec;color:#22303f}
+header{background:#22405f;color:#fff;padding:18px 16px;text-align:center}
+header h1{margin:0 0 6px;font-size:22px}
+header p{margin:4px 0;font-size:14px}
+header a{color:#cbb78a}
+main{padding:16px;max-width:1000px;margin:0 auto 80px}
+.clientList{list-style:none;padding:0;margin:0}
+.clientList li{margin-bottom:10px}
+.clientList a{display:block;background:#fff;border:2px solid #ddd;border-radius:8px;padding:14px 18px;text-decoration:none;color:#22405f;font-size:17px;font-weight:bold}
+.clientList a:hover{border-color:#2e8b57}
+.batch{margin-bottom:28px}
+.batchHead{font-size:16px;color:#22405f;border-bottom:2px solid #cbb78a;padding-bottom:6px;margin-bottom:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.card{background:#fff;border:2px solid #ddd;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.card img{width:100%;height:140px;object-fit:cover;display:block;background:#e5e0d5}
+.cap{padding:8px}
+.cap .num{font-weight:bold;font-size:15px;display:block}
+.cap .frame{font-size:12px;color:#666;font-family:monospace}
+.empty{padding:40px 20px;text-align:center;color:#666;font-size:16px}
+.err{padding:40px 20px;text-align:center;color:#a33;font-size:16px}
+.copyBtn{background:#cbb78a;color:#22303f;border:none;border-radius:20px;padding:8px 16px;font-size:13px;cursor:pointer;font-family:inherit}
