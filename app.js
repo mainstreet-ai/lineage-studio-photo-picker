@@ -13,7 +13,7 @@
   var flatPhotos = []; // ordered list for lightbox nav
   var lbIndex = -1;
 
-  fetch('clients/' + encodeURIComponent(clientSlug) + '/config.json')
+  fetch('clients/' + encodeURIComponent(clientSlug) + '/config.json', { cache: 'no-store' })
     .then(function (r) {
       if (!r.ok) throw new Error('Config not found for client "' + clientSlug + '"');
       return r.json();
