@@ -4,7 +4,7 @@
   "displayTitle": "Jackie's Wedding Album — Pick Your Photos",
   "intro": [
     "Tap a photo to see it big. Tap Select on the ones you want in your book.",
-    "When you are done, tap the green Submit my picks button at the bottom. It sends your list straight to Liane 2014 no texting needed."
+    "When you are done, tap the green Submit my picks button at the bottom. It sends your list straight to Liane — no texting needed."
   ],
   "webhookUrl": "https://lineagestudio.app.n8n.cloud/webhook/8caa03b0-3b77-4b34-9acf-c636494b3beb/lineage-studio-photo-picker-submit",
   "sections": [
