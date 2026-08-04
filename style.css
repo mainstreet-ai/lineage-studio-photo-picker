@@ -30,3 +30,7 @@ footer .cnt{font-size:17px;font-weight:bold}
 #out .listbox{font-size:20px;font-weight:bold;color:#22405f;background:#f4f1ec;border:2px solid #cbb78a;border-radius:8px;padding:14px;margin:0 0 14px}
 #out .err{color:#a33;font-weight:bold}
 #loading{padding:60px 20px;text-align:center;font-size:18px;color:#22405f}
+.clientList{list-style:none;padding:0 12px;margin:0}
+.clientList li{margin-bottom:10px}
+.clientList a{display:block;background:#fff;border:2px solid #ddd;border-radius:8px;padding:14px 18px;text-decoration:none;color:#22405f;font-size:17px;font-weight:bold}
+.clientList a:hover{border-color:#2e8b57}

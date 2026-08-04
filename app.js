@@ -4,7 +4,7 @@
   var app = document.getElementById('app');
 
   if (!clientSlug) {
-    app.innerHTML = '<div id="loading">No client specified. Use a link like ?client=wiles.</div>';
+    renderLanding();
     return;
   }
 
@@ -29,6 +29,34 @@
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function renderLanding() {
+    document.title = 'The Lineage Studio - Client Photo Pickers';
+    document.getElementById('headerContent').innerHTML =
+      '<h1>Client Photo Pickers</h1><p>Select a client to open their picker.</p>';
+    document.getElementById('sendBtn').style.display = 'none';
+    app.innerHTML = '<div id="loading">Loading…</div>';
+
+    ADMIN_AUTH.check(function () {
+      fetch('clients/manifest.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.json(); })
+        .then(function (clients) {
+          if (!clients.length) {
+            app.innerHTML = '<div id="loading">No clients yet.</div>';
+            return;
+          }
+          var html = '<ul class="clientList">';
+          clients.forEach(function (c) {
+            html += '<li><a href="?client=' + encodeURIComponent(c.slug) + '">' + escapeHtml(c.clientName) + '</a></li>';
+          });
+          html += '</ul>';
+          app.innerHTML = html;
+        })
+        .catch(function () {
+          app.innerHTML = '<div id="loading">Could not load the client list.</div>';
+        });
     });
   }
 
